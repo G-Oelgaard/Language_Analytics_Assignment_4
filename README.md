@@ -15,43 +15,51 @@ The CNN_Class.py script will:
 - Define and train CNN classification model
 - Print a classification report to show how good the classifier is.
 
-
 ## ------ METHODS ------
 
 
 ## ------ DATA ------
-The data is a .csv file containing around 6335 fake and real news articles divided into the columns "title", "text" and "label".
+The data is a .csv file 28643 comments with the labels "0" or "1". As indicated by the reasearch papers that created the dataset. "0" is non-threating comments and "1" is threatning comments.
 
 The data was obtained through the language analytics course.
 
+The research papers behind the data:
+- Hammer, H. L., Riegler, M. A., Øvrelid, L. & Veldal, E. (2019). "THREAT: A Large Annotated Corpus for Detection of Violent Threats". 7th IEEE International Workshop on Content-Based Multimedia Indexing.
+- Wester, A. L., Øvrelid, L., Velldal, E., & Hammer, H. L. (2016). "Threat detection in online discussions". Proceedings of the 7th Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis.
+
 ## ------ REPO STRUCTURE ------
 "src" FOLDER:
-- This folder contains the .py script.
+- This folder contains the .py scripts.
 
 "in" FOLDER:
-- This is where the data used in the scripts should be placed. Ie. where the "fake_or_real_news.csv" should be placed.
+- This is where the data used in the scripts should be placed. Ie. where the "VideoCommentsThreatCorpus.csv" should be placed.
 
 "out" FOLDER:
-- This is where the new .csv files will be placed.
+- This is where the classification reports will be placed.
 
 "utils" FOLDER:
 - This folder should include all utility scripts used by the main script.
 
 ## ------ SCRIPT USAGE ------
 ### Arguments for LogReg_Class.py script
-
 **Required**
 Argument         | What it specifies / does
 ---------------- | -------------------------
-"-l" / "--label" | The name of the label you want to use the script on. Ie. "FAKE" or "REAL"
+"-v" / "--vector" | What type of vectorizer you want to use. Either 'count' or 'tfidf'?
+"-c" / "--class_name" | What you want your classification report to be named. Remember to include '.txt'
+
+### Arguments for CNN_Class.py script
+Argument         | What it specifies / does
+---------------- | -------------------------
+"-c" / "--class_name" | What you want your classification report to be named. Remember to include '.txt'
 
 **Optional**
 Argument         | What it specifies / does
 ---------------- | -------------------------
-"-o" / "--output" | The filepath to the place you want to place the new .csv file in (without the output filename). If none is given the file will be outputted to the "out" folder.
-"-t" / "--top" | How many of the top named entities to be printed. Ex. if given 5, the top five most common entities will be printed in the terminal
-
-### Arguments for CNN_Class.py script
+"-s" / "--seq_length" | How big you want the sequence length to be. 750 if not specified.
+"-em" / "--embed_size" | How big you want the embed size to be. 300 if not specified. 
+"-e" / "--epoch" | How many epochs you want the model to run. 5 if not specified.
+"-b" / "--batch" | What batchsize you want the model to use. 128 if not specified. 
 
 ## ------ RESULTS ------
-The model achieves what it sets out to do. However, the structure of the script means that it will have to be run twice to get the new results for both the fake and real news.
+The scripts achieve what they set out to do. The classification reports also show a clear improvement when using a CNN model compared to a LogReg model. 
