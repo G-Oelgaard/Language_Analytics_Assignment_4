@@ -1,12 +1,20 @@
 # Language_Analytics_Assignment_4
 ## ------ SCRIPT DESCRIPTION ------
-This repository contains a script that takes the dataset "fake_or_real_news.csv" and create a new dataset with either the Fake or Real news polarity and named entities. Furthermore, if the user wishes the script will print the top X named entities.
+This repository contains two script using the "VideoCommentsThreatCorpus.csv" containing toxic comments divided into threatning and non-threatning. Both scripts are train classification models on the threat corpus.
 
-The script will:
-- Create a new .csv file with either the Real or fake news.
-- Append each articles polarity and named entities
-- Print the top X* named entities in the terminal. 
-   - '*' Specified by the user
+The LogReg_Class.py script will:
+- Load and balance the above mentioned .csv file.
+- Use either a Count or Tfidf vectorizer on the comments
+- Train logistical regression classifier
+- Print a classification report to show how good the classifier is.
+
+The CNN_Class.py script will:
+- Load and balance the above mentioned .csv file.
+- Normalize the comments
+- Tokenize, sequence and pad comments + binarize labels
+- Define and train CNN classification model
+- Print a classification report to show how good the classifier is.
+
 
 ## ------ METHODS ------
 
@@ -30,7 +38,7 @@ The data was obtained through the language analytics course.
 - This folder should include all utility scripts used by the main script.
 
 ## ------ SCRIPT USAGE ------
-### Arguments
+### Arguments for LogReg_Class.py script
 
 **Required**
 Argument         | What it specifies / does
@@ -42,6 +50,8 @@ Argument         | What it specifies / does
 ---------------- | -------------------------
 "-o" / "--output" | The filepath to the place you want to place the new .csv file in (without the output filename). If none is given the file will be outputted to the "out" folder.
 "-t" / "--top" | How many of the top named entities to be printed. Ex. if given 5, the top five most common entities will be printed in the terminal
+
+### Arguments for CNN_Class.py script
 
 ## ------ RESULTS ------
 The model achieves what it sets out to do. However, the structure of the script means that it will have to be run twice to get the new results for both the fake and real news.
