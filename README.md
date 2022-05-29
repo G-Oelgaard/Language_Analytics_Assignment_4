@@ -41,14 +41,15 @@ The research papers behind the data:
 - This folder should include all utility scripts used by the main script.
 
 ## ------ SCRIPT USAGE ------
-### Arguments for LogReg_Class.py script
+### Arguments for LogReg_Class.py script:
 **Required**
 Argument         | What it specifies / does
 ---------------- | -------------------------
 "-v" / "--vector" | What type of vectorizer you want to use. Either 'count' or 'tfidf'?
 "-c" / "--class_name" | What you want your classification report to be named. Remember to include '.txt'
 
-### Arguments for CNN_Class.py script
+
+### Arguments for CNN_Class.py script:
 Argument         | What it specifies / does
 ---------------- | -------------------------
 "-c" / "--class_name" | What you want your classification report to be named. Remember to include '.txt'
