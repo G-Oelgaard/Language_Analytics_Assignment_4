@@ -60,4 +60,4 @@ Argument         | What it specifies / does
 "-b" / "--batch" | What batchsize you want the model to use. 128 if not specified. 
 
 ## ------ RESULTS ------
-The scripts achieve what they set out to do. The classification reports also show a clear improvement when using a CNN model compared to a LogReg model. 
+The scripts achieve what they set out to do. The classification reports also show a clear improvement when using a CNN model compared to a LogReg model. As the time it took to run the CNN model was not much longer than the LogReg model, it would in almost all cases be better to use that model for relevant predictions. 
