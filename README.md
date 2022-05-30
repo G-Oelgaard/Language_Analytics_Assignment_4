@@ -15,9 +15,6 @@ The CNN_Class.py script will:
 - Define and train CNN classification model
 - Print a classification report to show how good the classifier is.
 
-## ------ METHODS ------
-
-
 ## ------ DATA ------
 The data is a .csv file 28643 comments with the labels "0" or "1". As indicated by the reasearch papers that created the dataset. "0" is non-threating comments and "1" is threatning comments.
 
