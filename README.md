@@ -1,11 +1,11 @@
 # Language_Analytics_Assignment_4
 ## ------ SCRIPT DESCRIPTION ------
-This repository contains two script using the "VideoCommentsThreatCorpus.csv" containing toxic comments divided into threatning and non-threatning. Both scripts are train classification models on the threat corpus.
+This repository contains two scripts using the "VideoCommentsThreatCorpus.csv" containing toxic comments divided into threatening and non-threatening. Both scripts are train classification models on the threat corpus.
 
 The LogReg_Class.py script will:
 - Load and balance the above mentioned .csv file.
 - Use either a Count or Tfidf vectorizer on the comments
-- Train logistical regression classifier
+- Train logistic regression classifier
 - Print a classification report to show how good the classifier is.
 
 The CNN_Class.py script will:
@@ -16,7 +16,7 @@ The CNN_Class.py script will:
 - Print a classification report to show how good the classifier is.
 
 ## ------ DATA ------
-The data is a .csv file 28643 comments with the labels "0" or "1". As indicated by the reasearch papers that created the dataset. "0" is non-threating comments and "1" is threatning comments.
+The data is a .csv file containing 28643 comments with the labels "0" or "1". As indicated by the research papers that created the dataset. "0" is non-threatening comments and "1" is threatening comments.
 
 The data was obtained through the language analytics course.
 
